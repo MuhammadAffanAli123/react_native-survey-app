@@ -74,7 +74,7 @@ export default (props) => {
 
       <Row style={{marginTop:40, paddingRight:25, paddingLeft:25}}>
       <Col style={{ alignItems:'center'}}>
-        <Item rounded style={[ styles.emailItem, emailStyleError ? styles.emailItemErrorStyle : styles.emailItemStyle ]}>
+        <Item  style={[ styles.emailItem, emailStyleError ? styles.emailItemErrorStyle : styles.emailItemStyle ]}>
         <Icon style={ emailStyleError ? styles.emailTextError : styles.emailText } name='mail'/>
         <Input placeholder='Email' style={ emailStyleError ? styles.emailTextError : styles.emailText } placeholderTextColor="#ffffff"
         value={email} onChangeText={val => setState({...state, email:val})}
@@ -85,7 +85,7 @@ export default (props) => {
 
       <Row style={{marginTop:15, paddingRight:25, paddingLeft:25}}>
       <Col style={{ alignItems:'center'}}>
-        <Item rounded style={[ styles.passwordItem, passwordStyleError ? styles.passwordItemErrorStyle : styles.passwordItemStyle ]}>
+        <Item  style={[ styles.passwordItem, passwordStyleError ? styles.passwordItemErrorStyle : styles.passwordItemStyle ]}>
         <Icon style={ passwordStyleError ? styles.passwordTextError : styles.passwordText } name='key'/>
         <Input placeholder='Password' style={ passwordStyleError ? styles.passwordTextError : styles.passwordText }
          placeholderTextColor="#ffffff" secureTextEntry={true} value={password} 
@@ -97,7 +97,7 @@ export default (props) => {
       <Row style={{marginTop:20}}>
         <Col style={{alignItems:'center'}}>
           {buttonAction === false ?
-        <Button rounded bordered style={{width:'50%', justifyContent:'center', borderColor:'#ffffff'}} onPress={login} disabled={buttonAction}>
+        <Button style={{width:'50%', justifyContent:'center', borderColor:'#ffffff'}} onPress={login} disabled={buttonAction}>
             <Text style={{ color:'#ffffff'}}>Sign in</Text>
           </Button>
           :
@@ -106,16 +106,17 @@ export default (props) => {
         </Col>
       </Row>
 
-      <Row style={{marginTop:30}}>
-        <Col style={{marginLeft:'10%'}}>
-          <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
-        <Text style={{color:'#ffffff'}} onPress={() => props.navigation.navigate('Signup')}>Sign up</Text>
-        </TouchableOpacity>
-        </Col>
-
-        <Col style={{marginLeft:'9%'}}>
+      <Row style={{marginTop:10 }}>
+        <Col style={{marginLeft:'60%'}}>
           <TouchableOpacity onPress={() => props.navigation.navigate('pass')}>
         <Text style={{color:'#ffffff'}} onPress={() => props.navigation.navigate('pass')}>Forgot Password?</Text>
+        </TouchableOpacity>
+        </Col>
+      </Row>
+      <Row style={{marginTop:10}}>
+        <Col style={{marginLeft:'1%'}}>
+          <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
+        <Text style={{color:'#ffffff'}} onPress={() => props.navigation.navigate('Signup')}>Don't Have An Accout</Text>
         </TouchableOpacity>
         </Col>
       </Row>

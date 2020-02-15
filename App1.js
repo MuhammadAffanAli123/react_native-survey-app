@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { StatusBar, StyleSheet, Image  } from 'react-native'
+import { StatusBar, StyleSheet, Image   } from 'react-native'
 import { Root, Container, Content, Header, Body, Text, Icon } from "native-base";
 import { customDrawerContent } from './src/components/CustomDrawerContent'
 import Logout from './src/components/Logout'
 import Splash from './src/view/Splash'
 import Login from './src/view/Login';
-import Signup from './src/view/Signup';
-import Try1 from './src/view/try'
+import Signup from './src/view/';
 import Verify from './src/view/Verify';
 import Phone from './src/view/PhoneVerify';
 import Home from './src/view/Home'
@@ -57,12 +56,13 @@ const App = () => {
 
   return (
     <Root>
-      <StatusBar backgroundColor="#333333" barStyle="default" />
+    
+      {/* <StatusBar backgroundColor="#333333" barStyle="default" /> */}
       <AppContainer />
       </Root>
 
     // <View>
-    //   <Try1/>
+    //   <Signup/>
     // </View>
   );
 };
