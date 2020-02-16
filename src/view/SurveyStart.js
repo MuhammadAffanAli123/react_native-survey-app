@@ -40,7 +40,7 @@ export default (props) => {
             BackHandler.removeEventListener('hardwareBackPress', back);
         }
 
-    },[])
+    },[])``
 
     useEffect(() => {
 
